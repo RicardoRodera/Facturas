@@ -3,7 +3,7 @@ package modelo;
 import java.util.Vector;
 
 public class Factura {
-    private Vector<Producto> productos;
+    private Vector<Producto> productos = new Vector<>();
 
     public void meterProducto(Producto p) {
         this.productos.add(p);
@@ -17,7 +17,7 @@ public class Factura {
         return suma;
     }
 
-    public float plicariva(float iva) {
-        return this.totalFactura() * iva;
+    public float aplicariva(float iva) {
+        return this.totalFactura() * (1 + iva);
     }
 }
